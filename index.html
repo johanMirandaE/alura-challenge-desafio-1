@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>Encriptador</title>
+</head>
+<body>
+        <header class="header">
+            <img class="logo" src="/imagenes/Logo.png" alt="logo de alura">
+        </header>
+        <main class="mensajes">
+            <section class="cajaDeMensaje">
+                <div class="cajaDelTexto">
+                    <textarea class="texto" cols="30" rows="10" placeholder="ingrese el texto aqui" onkeypress="return (event.charCode == 209 || event.charCode == 241(event.charCode >= 65 && event.charCode <= 90) || (event.charCode >= 97 && event.charCode <= 122))"></textarea>
+                </div>
+                <div class="informacion"> 
+                    <img id="exclamacion" src="/imagenes/bi_exclamation-circle-fill.png" alt="Signo de exclamacion">
+                    <p>Solo letras minúsculas y sin acentos</p>
+                    <p id="nombre">Johan Eduardo Miranda Esteban - 2024</p>              
+                </div>
+                <div class="botones">
+                    <button class="btn-encriptar" onclick="btnEncriptar()">Encriptar</button>
+                    <button class="btn-desencriptar" onclick="btnDesencriptar()">Desencriptar</button>
+                </div>
+            </section>
+            <section class="mensajeEncriptado">
+                    <textarea id="cajaDeMensaje"></textarea>
+                    <div class="mensajeDeEspera" id="borrarMensaje">
+                        <img src="/imagenes/Muñeco.png" alt="imagen de muñeco" id="muñeco">
+                        <h2 id="titulo-mensaje">Ningún mensaje fue encontrado</h2>
+                        <p id="parrafo">Ingresa el texto que deseas encriptar o desencriptar</p>
+                    </div>
+                    <div id="bt">
+                        <button class="btn-copiar" id="botonCopiar" onclick="btnCopiar()">Copiar</button>
+                    </div>
+                </div>
+            </section>
+        </main> 
+    </body>
+    <script src="/script.js"></script>
+</html>
